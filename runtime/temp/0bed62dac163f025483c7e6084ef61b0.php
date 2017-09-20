@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1505903914;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505901794;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505904137;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1505907003;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505906785;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>易游内部系统</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__3WBD_CSS__/bootstrap.min.css">
+    <script src="__3WBD_JQ__/jquery.min.js"></script>
+    <script src="__3WBD_JS__/bootstrap.min.js"></script>
+    <script src="__3WBD_VUE__/vue.min.js"></script>
   </head>
   <body>
       <div class="container-fluid">
@@ -28,9 +31,10 @@
     </div>
     <div class="col-md-4"></div>
 </div>
-                <footer style="bottom: 0;width: 100%; font-size:2.5ex;text-align: center">
-                    Copyright@2017-2020 易游网络
-                </footer>
-        </div>
+<script src="__PUBLIC_VALIDATE__/js/validate.js"></script>
+                        <footer style="bottom: 0;width: 100%; font-size:2.5ex;text-align: center">
+                            Copyright@2017-2020 易游网络
+                        </footer>
+                </div>
     </body>
 </html>
