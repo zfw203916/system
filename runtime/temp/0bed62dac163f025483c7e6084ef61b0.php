@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1505901413;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505901794;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505901800;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1505903914;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505901794;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505904137;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -11,13 +11,25 @@
   </head>
   <body>
       <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            易游内部系统
-        </div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 hui-margin-top-30 hui-padding-all-20 hui-background-color-white">
+        <form role="form" action="<?php echo url('login_check'); ?>" method="post">
+            <div class="form-group">
+                <label for="zh">用户名：</label>
+                <input type="text" name="work" class="form-control" id="zh" placeholder="账号">
+            </div>
+            <div class="form-group">
+                <label for="mm">密码</label>
+                <input type="password" name="password" class="form-control" id="mm" placeholder="密码">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">登录</button>
+        </form>
     </div>
-                <footer style="bottom: 0;width: 100%; font-size:2.5ex">
-                    Copyright@2010-2020 易游网络
+    <div class="col-md-4"></div>
+</div>
+                <footer style="bottom: 0;width: 100%; font-size:2.5ex;text-align: center">
+                    Copyright@2017-2020 易游网络
                 </footer>
         </div>
     </body>

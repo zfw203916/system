@@ -20,6 +20,13 @@ class IndexController extends MonBaseController
     }
 
     /**
+     * ¼ì²éµÇÈë×´¿ö
+     */
+    public function login_check(){
+        echo "test";
+    }
+
+    /**
      * @return \think\response\View
      * @Victor need single h5
      * @This is attract person go here.
