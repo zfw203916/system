@@ -12,7 +12,7 @@ class IndexController extends MonBaseController
 {
     /**
      * @return \think\response\View
-     * @Mars need single h5
+     * @易游  内部系统
      */
     public function index()
     {
@@ -25,6 +25,7 @@ class IndexController extends MonBaseController
      * @This is attract person go here.
      * so must need attach data.考虑抓取数据功能
      */
+    /*
     public function  attract(){
         return view();
     }
@@ -32,4 +33,5 @@ class IndexController extends MonBaseController
     public function test(){
         return view();
     }
+    */
 }
