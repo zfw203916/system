@@ -1,7 +1,31 @@
 {include file="common/header" title="易游内部系统" test='易游内部系统'/}
-    <div class="row">
-        <div class="col-md-12">
-            易游内部系统
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 hui-margin-top-30 hui-padding-all-20 hui-background-color-white">
+        <form role="form" action="{:url('login_check')}" method="post">
+            <div class="form-group">
+                <label for="zh">工号：</label>
+                <input type="text" name="work" class="form-control" id="zh" placeholder="账号">
+            </div>
+            <div class="form-group">
+                <label for="mm">密码</label>
+                <input type="password" name="password" class="form-control" id="mm" placeholder="密码">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">登录</button>
+        </form>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">账号密码：</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">{$up.Uname}</li>
+                    <li class="list-group-item list-group-item-info">{$up.Password}</li>
+                    <li class="list-group-item list-group-item-info">{$title}</li>
+                </ul>
+            </div>
         </div>
     </div>
+    <div class="col-md-4"></div>
+</div>
 {include file="common/footer"/}
