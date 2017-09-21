@@ -7,9 +7,10 @@
  * Time: 7:36 PM
  */
 namespace app\index\model;
-use think\model;
+use think\Model;
 
 class MonBase extends Model
 {
+
 
 }

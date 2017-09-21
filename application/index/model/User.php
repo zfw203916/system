@@ -7,7 +7,6 @@
  * Time: 7:36 PM
  */
 namespace app\index\model;
-use think\controller;
 
 class User extends MonBase
 {
