@@ -1,7 +1,8 @@
 <?php
 namespace app\index\controller;
 
-use think\Controller;
+use app\index\model\Login;
+use think\Db;
 
 /**
  * Class IndexController
@@ -20,17 +21,20 @@ class IndexController extends MonBaseController
     }
 
     /**
-     * 检查登入状况
+     * 检查登入状况.
      */
     public function login_check(){
-        echo "test";
+
+
+        //echo "test";
     }
+
 
     /**
      * @return \think\response\View
      * @Victor need single h5
      * @This is attract person go here.
-     * so must need attach data.考虑抓取数据功能
+     * so must need attach data.考虑抓取数据功能,后期考虑
      */
     /*
     public function  attract(){
