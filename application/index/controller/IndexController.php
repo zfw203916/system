@@ -2,6 +2,7 @@
 namespace app\index\controller;
 
 use app\index\model\Login;
+use app\index\model\User;
 use think\Db;
 
 /**
@@ -25,6 +26,8 @@ class IndexController extends MonBaseController
      */
     public function login_check(){
 
+        $data = User::all();
+        var_dump($data);die;
 
         //echo "test";
     }
