@@ -7,9 +7,8 @@
  * Time: 7:36 PM
  */
 namespace app\index\model;
-use think\controller;
 
 class User extends MonBase
 {
-    protected $table = 'user';
+    protected $table = 'mon_user';
 }
