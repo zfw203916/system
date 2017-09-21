@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1505907003;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505906785;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1505994448;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505906785;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -20,7 +20,7 @@
         <form role="form" action="<?php echo url('login_check'); ?>" method="post">
             <div class="form-group">
                 <label for="zh">用户名：</label>
-                <input type="text" name="work" class="form-control" id="zh" placeholder="账号">
+                <input type="text" name="user" class="form-control" id="zh" placeholder="账号">
             </div>
             <div class="form-group">
                 <label for="mm">密码</label>

@@ -21,14 +21,33 @@ class IndexController extends MonBaseController
         return view();
     }
 
+
+    public function loin(){
+        $this->assign([
+            'title'=>'系统管理页'
+        ]);
+        return view();
+    }
     /**
      * 检查登入状况.
      */
     public function login_check(){
 
-        $data = User::all();
+        $data = User::get([
+            'user'=>input('user'),
+            'password'=>input('password')
+        ]);
         var_dump($data);die;
+        echo User::get([
+            'user'=>input('user'),
+            'password'=>input('password')
+        ])->getLastSql();die;
 
+        if($data){
+            $this->success("登入成功",'admin/index');
+        }else{
+            $this->error("登入失败");
+        }
         //echo "test";
     }
 
