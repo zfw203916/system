@@ -12,7 +12,20 @@ namespace app\index\controller;
 class H5emailController extends MonBaseController
 {
     public function index(){
+
+        $this->assign('data',$data = [
+            'title'=>'易游邮件发送管理'
+        ]);
         return view();
+    }
+
+    /**
+     * @modify value
+     * @return int
+     */
+    public function setValue(){
+
+        
     }
 
 }

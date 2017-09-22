@@ -10,20 +10,37 @@
                 background-color: #977964;
             }
         </style>
-        <div class="row" id="row1">
+        <div class="row">
             <div class="col-xl-1"></div>
-            <div class="col-xl-10">test1测试</div>
+            <div class="col-xl-10">
+                <p v-html="message"></p>
+            </div>
             <div class="col-xl-1"></div>
         </div>
         <div class="row" id="row2">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-10">test2测试</div>
-            <div class="col-xl-1"></div>
+            <form action="">
+                <div class="col-xl-1"></div>
+                <div class="col-xl-10">
+                    <input name="lineNum" value="">线条数
+                    <input name="">
+                </div>
+                <div class="col-xl-1"></div>
+            </form>
         </div>
-        <div class="row" id="row3">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-10">test3测试</div>
-            <div class="col-xl-1"></div>
-        </div>
-<script src="__PUBLIC__/index/h5email.js"></script>
+<script>
+    var exampleData = {
+        // 这是我们的Model
+        message :'{$data.title}'
+    }
+
+    /**创建一个 Vue 实例或 "ViewModel"
+     * 它连接 View 与 Model
+     * */
+    new Vue({
+        el:'#app',
+        data: exampleData
+    });
+
+</script>
+<!--<script src="__PUBLIC__/index/h5email.js"></script>-->
 {include file="common/footer"/}

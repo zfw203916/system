@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1505984110;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505906785;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1506070955;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1506070478;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -12,7 +12,7 @@
     <script src="__3WBD_JS__/bootstrap.min.js"></script>
     <script src="__3WBD_VUE__/vue.min.js"></script>
   </head>
-  <body>
+  <body id="app">
       <div class="container-fluid">
         <style>
             #row1{
@@ -25,22 +25,39 @@
                 background-color: #977964;
             }
         </style>
-        <div class="row" id="row1">
+        <div class="row">
             <div class="col-xl-1"></div>
-            <div class="col-xl-10">test1测试</div>
+            <div class="col-xl-10">
+                <p v-html="message"></p>
+            </div>
             <div class="col-xl-1"></div>
         </div>
         <div class="row" id="row2">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-10">test2测试</div>
-            <div class="col-xl-1"></div>
+            <form action="">
+                <div class="col-xl-1"></div>
+                <div class="col-xl-10">
+                    <input name="">线条数
+                    <input name="">
+                </div>
+                <div class="col-xl-1"></div>
+            </form>
         </div>
-        <div class="row" id="row3">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-10">test3测试</div>
-            <div class="col-xl-1"></div>
-        </div>
-<script src="__PUBLIC__/index/h5email.js"></script>
+<script>
+    var exampleData = {
+        // 这是我们的Model
+        message :'<?php echo $data['title']; ?>'
+    }
+
+    /**创建一个 Vue 实例或 "ViewModel"
+     * 它连接 View 与 Model
+     * */
+    new Vue({
+        el:'#app',
+        data: exampleData
+    });
+
+</script>
+<!--<script src="__PUBLIC__/index/h5email.js"></script>-->
                         <footer style="bottom: 0;width: 100%; font-size:2.5ex;text-align: center">
                             Copyright@2017-2020 易游网络
                         </footer>

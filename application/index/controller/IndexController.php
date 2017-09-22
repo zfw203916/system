@@ -37,11 +37,7 @@ class IndexController extends MonBaseController
             'user'=>input('user'),
             'password'=>input('password')
         ]);
-        var_dump($data);die;
-        echo User::get([
-            'user'=>input('user'),
-            'password'=>input('password')
-        ])->getLastSql();die;
+
 
         if($data){
             $this->success("µ«»Î≥…π¶",'admin/index');
