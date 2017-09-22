@@ -1,8 +1,9 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\Program Files\WWW\system\public/../application/index\view\h5email\h5view.html";i:1506081421;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{$data.title}</title>
+    <title><?php echo $data['title']; ?></title>
     <link rel="stylesheet" href="__3WBD_CSS__/bootstrap.min.css">
     <script src="__3WBD_JQ__/jquery.min.js"></script>
 </head>
@@ -21,22 +22,22 @@
     <div class="container-fluid">
         <div class="row" id="id1">
             <div class="col-xl-2"></div>
-            <div class="col-xl-8">线条数：{$data.line}</div>
+            <div class="col-xl-8">线条数：<?php echo $data['line']; ?></div>
             <div class="col-xl-2"></div>
         </div>
         <div class="row" id="id2" style="background-color: #2E5CD5;">
             <div class="col-xl-2"></div>
-            <div class="col-xl-8">背景色：{$data.bgColor}</div>
+            <div class="col-xl-8">背景色：<?php echo $data['bgColor']; ?></div>
                 <div class="col-xl-2"></div>
         </div>
         <div class="row" id="id3">
             <div class="col-xl-2"></div>
-            <div class="col-xl-8">其它：{$data.other}</div>
+            <div class="col-xl-8">其它：<?php echo $data['other']; ?></div>
                 <div class="col-xl-2"></div>
          </div>
     </div>
 </body>
 <script>
-    $("#id2").attr("style",'{$data.bgColor}');
+    $("#id2").attr("style",'<?php echo $data['bgColor']; ?>');
 </script>
 </html>

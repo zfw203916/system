@@ -25,7 +25,15 @@ class H5emailController extends MonBaseController
      */
     public function setValue(){
 
-        
+        $data =[
+            'title'=>'易游游戏',
+            'line'=>input('line'),
+            'bgColor'=>input('bgColor'),
+            'other'=>input('other')
+        ];
+
+        $this->assign('data', $data);
+        return view('h5email/h5view');
     }
 
 }

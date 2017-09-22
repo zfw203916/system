@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1506070955;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1506070478;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1506080250;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1506070478;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -32,16 +32,19 @@
             </div>
             <div class="col-xl-1"></div>
         </div>
-        <div class="row" id="row2">
-            <form action="">
-                <div class="col-xl-1"></div>
-                <div class="col-xl-10">
-                    <input name="">线条数
-                    <input name="">
-                </div>
-                <div class="col-xl-1"></div>
-            </form>
+    <form action="<?php echo url('setValue'); ?>" method="post">
+        <div class="row">
+            <div class="col-xl-1"></div>
+            <div class="col-xl-10">
+                <input id="line"  name="line" value="">线条数
+                <br/>
+                <input id="bgColor" name="bgColor" value="">背景色
+                <input id="other" name="bgColor" value="">其它
+            </div>
+            <div class="col-xl-1"></div>
+            <button class="but" type="submit">提交</button>
         </div>
+    </form>
 <script>
     var exampleData = {
         // 这是我们的Model
