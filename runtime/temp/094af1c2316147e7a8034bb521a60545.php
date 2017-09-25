@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\Program Files\WWW\system\public/../application/index\view\h5email\h5view.html";i:1506340031;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\Program Files\WWW\system\public/../application/index\view\h5email\h5view.html";i:1506341071;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +36,8 @@
             <div id="id2a" class="col-xl-12">
                 <p id="frontColor"><?php echo $data['content']; ?></p>
                 <!--<img src="http://img1.cache.netease.com/cnews/img/logo2013/s/news.png" alt="网易新闻">-->
-                <img src="__ROOT__/public/static/index/setmail/img/f<?php echo $data['jpg']; ?>.jpg" alt="易游游戏">
+                <img src="__ROOT__/public/static/index/setmail/img/f<?php echo $data['jpg']; ?>.jpg" width="40" height="40" alt="易游游戏">
+                <img src="http://test.eu8007.com/f<?php echo $data['jpg']; ?>.png" width="40" height="40" alt="易游游戏">
             </div>
         </div>
     </div>
