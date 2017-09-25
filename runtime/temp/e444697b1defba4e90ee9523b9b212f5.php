@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1506080250;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1506070478;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1506322356;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1506070478;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -32,19 +32,28 @@
             </div>
             <div class="col-xl-1"></div>
         </div>
-    <form action="<?php echo url('setValue'); ?>" method="post">
+
         <div class="row">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-10">
-                <input id="line"  name="line" value="">线条数
-                <br/>
-                <input id="bgColor" name="bgColor" value="">背景色
-                <input id="other" name="bgColor" value="">其它
+            <div class="col-xl-3"></div>
+            <div class="col-xl-6">
+                <form action="<?php echo url('setValue'); ?>" method="post">
+                    <input id="line"  name="line" value="">横线条数
+                    <br>
+                    <input id="verticalLine"  name="verticalLine" value="">竖线条数
+                    <br>
+                    <input id="bgColor" name="bgColor" value="">背景色
+                    <br>
+                    <input id="frontColor" name="frontColor" value="">字体颜色
+                    <br>
+                    <input name="title" class="">邮件标题
+                    <br>
+                    <textarea name="content" class=""></textarea>邮件内容
+                    <br>
+                    <button class="but" type="submit">提交</button>
+                </form>
             </div>
-            <div class="col-xl-1"></div>
-            <button class="but" type="submit">提交</button>
+            <div class="col-xl-3"></div>
         </div>
-    </form>
 <script>
     var exampleData = {
         // 这是我们的Model

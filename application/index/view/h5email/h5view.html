@@ -7,11 +7,17 @@
     <script src="__3WBD_JQ__/jquery.min.js"></script>
 </head>
 <style>
+    .row{
+        border:2px dashed #3AB2FF !important;
+    }
     #id1{
-        background-color: #006666;
+
     }
     #id2{
 
+    }
+    #id2a{
+        background: red;
     }
     #id3{
         background-color: #977964;
@@ -21,22 +27,21 @@
     <div class="container-fluid">
         <div class="row" id="id1">
             <div class="col-xl-2"></div>
-            <div class="col-xl-8">线条数：{$data.line}</div>
+            <div id="id1a" class="col-xl-8">邮件标题:{$data.title}</div>
             <div class="col-xl-2"></div>
         </div>
-        <div class="row" id="id2" style="background-color: #2E5CD5;">
-            <div class="col-xl-2"></div>
-            <div class="col-xl-8">背景色：{$data.bgColor}</div>
-                <div class="col-xl-2"></div>
+        <div class="row" id="id2">
+            <!--整体背景色: -->
+            <div id="id2a" class="col-xl-12">
+                <p id="frontColor">{$data.content}</p>
+                <!--<img src="http://img1.cache.netease.com/cnews/img/logo2013/s/news.png" alt="网易新闻">-->
+                <img src="__ROOT__/public/static/index/setmail/img/f{$data.jpg}.jpg" alt="易游游戏">
+            </div>
         </div>
-        <div class="row" id="id3">
-            <div class="col-xl-2"></div>
-            <div class="col-xl-8">其它：{$data.other}</div>
-                <div class="col-xl-2"></div>
-         </div>
     </div>
 </body>
 <script>
-    $("#id2").attr("style",'{$data.bgColor}');
+    $("#id2a").attr("style",'background-color:{$data.bgColor};border:2px dashed #3AB2FF;font-size:16px;text-align:left');
+    $('#frontColor').attr("style",'color:{$data.frontColor}');
 </script>
 </html>
