@@ -14,7 +14,7 @@ class H5emailController extends MonBaseController
     public function index(){
 
         $this->assign('data',$data = [
-            'title'=>'易游邮件发送系统'
+            'title'=>'易游邮件发送处理'
         ]);
         return view();
     }
@@ -168,21 +168,52 @@ class H5emailController extends MonBaseController
         $verticalLine = trim(input('verticalLine'))?trim(input('verticalLine')):2;//竖线条数
         $frontColor = trim(input('frontColor'))?trim(input('frontColor')):'#000000';//字体颜色
         $bgColor = trim(input('bgColor'))?trim(input('bgColor')):$randColor;//背景颜色
+        $select = (int)input('select');
+        $select2 = (int)input('select2');
 
-        $data =[
+        $merge =[
             'title'=>'易游游戏',
             'line'=>input('line'),
             'verticalLine'=>$verticalLine,
-            'frontColor'=>$frontColor,
+            'other'=>input('other'),
             'bgColor'=>$bgColor,
-            'title'=>input('title'),
-            'content'=>input('content'),
             'jpg'=>rand(1,27),
-            'other'=>input('other')
         ];
 
-        $this->assign('data', $data);
-        return view('h5email/h5view');
+        switch($select){
+            case 0 :
+                //追加数据
+                $dataAdd = [
+                    'content'=>'{内容变量}',
+                    'frontColor'=>'{字体颜色}',
+                ];
+                //$this->error("未开启防反垃圾邮件机制");
+                $merge = array_merge($dataAdd, $merge);
+                $template  = 'h5view';
+                break;
+
+            case 1:
+                //追加数据
+                $dataAdd = [
+                    'content'=>input('content'),
+                    'frontColor'=>$frontColor,
+                ];
+
+                if($select2 == 0){
+                    $template  = 'h5view';
+                }
+                if($select2 == 1){
+                    $emailFiles = rand(1,10);
+                    $emailTemplate = rand($emailFiles*3-2,$emailFiles*3-0);//计算模板位置随机值
+                    $template = 'email/'.$emailFiles.'/'.$emailTemplate;//模板url
+                }
+                $merge = array_merge($dataAdd,$merge);
+                break;
+        }
+
+        $this->assign('data', $merge);
+        return view('h5email/'.$template);
+
     }
 
 }
