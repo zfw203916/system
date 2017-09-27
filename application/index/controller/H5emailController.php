@@ -165,6 +165,7 @@ class H5emailController extends MonBaseController
         ];
 
         $randColor = array_rand($color,1);
+        $emailTitle = trim(input('title'))?trim(input('title')):"易游游戏";
         $verticalLine = trim(input('verticalLine'))?trim(input('verticalLine')):2;//竖线条数
         $frontColor = trim(input('frontColor'))?trim(input('frontColor')):'#000000';//字体颜色
         $bgColor = trim(input('bgColor'))?trim(input('bgColor')):$randColor;//背景颜色
@@ -172,14 +173,15 @@ class H5emailController extends MonBaseController
         $select2 = (int)input('select2');
 
         $merge =[
-            'title'=>'易游游戏',
+            'title'=>$emailTitle,
             'line'=>input('line'),
             'verticalLine'=>$verticalLine,
             'other'=>input('other'),
             'bgColor'=>$bgColor,
             'jpg'=>rand(1,27),
+            'val'=>rand(1,1000000),
+            'time'=>date('Y-m-d H:i:s',time())
         ];
-
         switch($select){
             case 0 :
                 //追加数据

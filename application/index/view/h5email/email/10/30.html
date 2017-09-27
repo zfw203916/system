@@ -209,8 +209,8 @@
 				<table id="Masthead" cellspacing="0" cellpadding="11" width="505" style="color: #fff; background-color: #5dc7db;">
 					<tr>
 						<td style="color: #fff; font-family: Helvetica, Arial, sans-serif;">
-							<h1>ABC Widgets</h1>
-							<p>eNewsletter: September 27, 2007</p>
+							<h1>{$data.title}</h1>
+							<p>eNewsletter: {$data.time}</p>
 						</td>
 					</tr>
 				</table>
@@ -228,7 +228,7 @@
 							<ul>
 																<li><a href="#">Happening this month</a></li>
 								<li><a href="#">Latest Events</a></li>
-								<li><a href="#">New Web Site</a></li>
+								<li><a href="#">{$data.title}</a></li>
 							</ul>
 							<h3 id="First">Also this month</h3>
 							<p>Lorem ipsum dolor sit amet, lipsum consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio.</p>
@@ -238,11 +238,11 @@
 						<td id="Primary" width="345" style="font-family: Helvetica, Arial, sans-serif;">
 							<h2>Happening this month</h2>
 <img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi.</p>
+
 <p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet.</p>
 
 <h2>Latest Events</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam tristique nibh at dolor venenatis aliquet.</p>
+<p>{$data.content} </p>
 						</td>
 					</tr>
 				</table>

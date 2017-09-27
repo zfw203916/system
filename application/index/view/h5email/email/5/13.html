@@ -189,8 +189,8 @@
 				<table id="Masthead" cellspacing="0" cellpadding="20" width="580">
 					<tr>
 						<td style="color: #fff; background: #333; font-family: Helvetica, Arial, sans-serif;">
-							<h1 style="font-family: Georgia, Palatino, serif;">Widget Monthly Newsletter</h1>
-							<p><span id="Date">September 27, 2007</span> Brought to you by ABC Widgets</p>
+							<h1 style="font-family: Georgia, Palatino, serif;">{$data.title}</h1>
+							<p><span id="Date">{$data.time}</span> Brought to you by {$data.title}</p>
 						</td>
 					</tr>
 				</table>
@@ -200,11 +200,11 @@
 							
 							<h2 style="font-family: Georgia, Palatino, serif;">Happening this month</h2>
 <img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
-<p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere.</p>
+<p>{$data.content}</p>
+<p><div style="display:none" >易游{$data.val}</div></p>
 
 <h2 style="font-family: Georgia, Palatino, serif;">Latest Events</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam.</p>
+<p>{$data.content} Mauris sollicitudin sapien nec quam.</p>
 						</td>
 					</tr>
 				</table>

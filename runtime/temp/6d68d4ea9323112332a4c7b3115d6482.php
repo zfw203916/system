@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\3\9.html";i:1506418878;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\3\9.html";i:1506497474;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -257,8 +257,8 @@
 				<table cellspacing="0" cellpadding="0" width="550">
 					<tr>
 						<td style="color: #fff; background: #6cf; font-family: Helvetica, Arial, sans-serif;">
-							<h1>Widget Monthly Newsletter</h1>
-							<p><span id="Date">September 27, 2007</span> Brought to you by ABC Widgets</p>
+							<h1><?php echo $data['title']; ?></h1>
+							<p><span id="Date"><?php echo $data['time']; ?></span> Brought to you by <?php echo $data['title']; ?></p>
 						</td>
 					</tr>
 				</table>
@@ -271,18 +271,18 @@
 				<td id="Primary" style="font-family: Helvetica, Arial, sans-serif;">
 					<h2>Happening this month</h2>
 <img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi.</p>
+
 <p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet.</p>
 
 <h2>Latest Events</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam tristique nibh at dolor venenatis aliquet.</p>
+<p><?php echo $data['content']; ?> </p>
 				</td>
 				<td id="Secondary" style="font-family: Helvetica, Arial, sans-serif;">
 					<h2>In this issue</h2>
 					<ul>
 																<li><a href="#">Happening this month</a></li>
 								<li><a href="#">Latest Events</a></li>
-								<li><a href="#">New Web Site</a></li>
+								<li><a href="#"><?php echo $data['title']; ?></a></li>
 							</ul>
 					<h2>Also this issue</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio.</p>
@@ -298,8 +298,8 @@
 				<table cellspacing="0" cellpadding="0" width="550">
 					<tr>
 						<td style="color: #d69898; background: #c33; font-family: Helvetica, Arial, sans-serif;">
-							<h2 style="color: #fff; background: #c33;">New Web Site</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
+							<h2 style="color: #fff; background: #c33;"><?php echo $data['title']; ?></h2>
+<p><?php echo $data['content']; ?></p>
 						</td>
 					</tr>
 				</table>

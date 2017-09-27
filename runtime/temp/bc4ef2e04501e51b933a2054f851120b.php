@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\2\4.html";i:1506418878;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\2\4.html";i:1506497474;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -253,8 +253,8 @@
 				<table cellspacing="0" cellpadding="0" width="550">
 					<tr>
 						<td style="color: #fff; background: #945620; font-family: Helvetica, Arial, sans-serif;">
-							<h1>Widget Monthly Newsletter</h1>
-							<p><span id="Date">September 27, 2007</span> Brought to you by ABC Widgets</p>
+							<h1><?php echo $data['title']; ?></h1>
+							<p><span id="Date"><?php echo $data['time']; ?></span> Brought to you by <?php echo $data['title']; ?></p>
 						</td>
 					</tr>
 				</table>
@@ -267,11 +267,11 @@
 				<td id="Primary" style="font-family: Helvetica, Arial, sans-serif;">
 					<h2>Happening this month</h2>
 <img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
-<p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere.</p>
+<p><?php echo $data['content']; ?></p>
+<p><div style="display:none" >易游<?php echo $data['val']; ?></div></p>
 
 <h2>Latest Events</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam.</p>
+<p><?php echo $data['content']; ?> Mauris sollicitudin sapien nec quam.</p>
 				</td>
 			</tr>
 		</table>
@@ -282,8 +282,8 @@
 				<table cellspacing="0" cellpadding="0" width="550">
 					<tr>
 						<td style="color: #e1c0a0; background: #c96; font-family: Helvetica, Arial, sans-serif;">
-							<h2 style="color: #fff; background: #c96;">New Web Site</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
+							<h2 style="color: #fff; background: #c96;"><?php echo $data['title']; ?></h2>
+<p><?php echo $data['content']; ?></p>
 						</td>
 					</tr>
 				</table>

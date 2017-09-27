@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\4\11.html";i:1186028922;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\4\11.html";i:1506497474;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -229,8 +229,8 @@
 				<table cellspacing="0" cellpadding="0" width="550">
 					<tr>
 						<td>
-							<h1>Widget Monthly Newsletter</h1>
-							<p><span id="Date">September 27, 2007</span> Brought to you by ABC Widgets</p>
+							<h1><?php echo $data['title']; ?></h1>
+							<p><span id="Date"><?php echo $data['time']; ?></span> Brought to you by <?php echo $data['title']; ?></p>
 						</td>
 					</tr>
 				</table>
@@ -243,7 +243,7 @@
 				<td id="Primary" style="font-family: Helvetica, Arial, sans-serif;">
 					<h2>Happening this month</h2>
 <img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam.</p>
+<p><?php echo $data['content']; ?> Mauris sollicitudin sapien nec quam.</p>
 <p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere, velit lacus elementum enim, eget semper justo leo eget enim.</p>
 <p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere, velit lacus elementum enim, eget semper justo leo eget enim.</p>
 			</tr>
@@ -255,7 +255,7 @@
 				<table cellspacing="0" cellpadding="0" width="550">
 					<tr>
 						<td style="color: #999; background: #ccc; font-family: Helvetica, Arial, sans-serif;">
-							<p>&#169;2007 ABC Widgets, 123 Some Street, City, ST 99999. <unsubscribe>Unsubscribe</unsubscribe> from this newsletter.</p>
+							<p v-html="message"></p> from this newsletter.</p>
 						</td>
 					</tr>
 				</table>

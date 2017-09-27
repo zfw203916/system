@@ -189,8 +189,8 @@
 				<table id="Masthead" cellspacing="0" cellpadding="11" width="505" style="color: #fff; background-color: #5dc7db;">
 					<tr>
 						<td style="color: #fff; font-family: Helvetica, Arial, sans-serif;">
-							<h1>ABC Widgets</h1>
-							<p>eNewsletter: September 27, 2007</p>
+							<h1>{$data.title}</h1>
+							<p>eNewsletter: {$data.time}</p>
 						</td>
 					</tr>
 				</table>
@@ -206,11 +206,11 @@
 						<td id="Primary" style="font-family: Helvetica, Arial, sans-serif;">
 							<h2>Happening this month</h2>
 <img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
-<p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere.</p>
+<p>{$data.content}</p>
+<p><div style="display:none" >易游{$data.val}</div></p>
 
 <h2>Latest Events</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam.</p>
+<p>{$data.content} Mauris sollicitudin sapien nec quam.</p>
 						</td>
 					</tr>
 				</table>

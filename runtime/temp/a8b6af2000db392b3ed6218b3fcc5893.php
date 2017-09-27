@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\9\26.html";i:1506418878;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\9\26.html";i:1506497455;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -190,8 +190,8 @@
 				<table id="Masthead" cellspacing="0" cellpadding="11" width="505" style="color: #fff; background-color: #963;">
 					<tr>
 						<td style="color: #fff; font-family: Helvetica, Arial, sans-serif;">
-							<h1>ABC Widgets</h1>
-							<p>eNewsletter: September 27, 2007</p>
+							<h1><?php echo $data['title']; ?></h1>
+							<p>eNewsletter: <?php echo $data['time']; ?></p>
 						</td>
 					</tr>
 				</table>
@@ -206,10 +206,10 @@
 					<tr valign="top">
 						<td id="Primary" style="font-family: Helvetica, Arial, sans-serif;">
 							<h2>Happening this month</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
-<p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
-<p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere.</p>
-<p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet. Vivamus pellentesque bibendum lorem. Aenean a lectus. Nullam diam odio, egestas quis, bibendum vitae, hendrerit eget, massa. Sed aliquam, justo id ornare posuere. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
+<p><?php echo $data['content']; ?></p>
+<p><div style="display:none" >易游<?php echo $data['val']; ?></div> <?php echo $data['content']; ?></p>
+<p><div style="display:none" >易游<?php echo $data['val']; ?></div></p>
+<p><div style="display:none" >易游<?php echo $data['val']; ?></div> <?php echo $data['content']; ?></p>
 						</td>
 					</tr>
 				</table>

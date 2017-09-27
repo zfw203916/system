@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\5\15.html";i:1506418878;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\5\15.html";i:1506497474;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -209,8 +209,8 @@
 				<table id="Masthead" cellspacing="0" cellpadding="20" width="580">
 					<tr>
 						<td style="color: #fff; background: #333; font-family: Helvetica, Arial, sans-serif;">
-							<h1 style="font-family: Georgia, Palatino, serif;">Widget Monthly Newsletter</h1>
-							<p><span id="Date">September 27, 2007</span> Brought to you by ABC Widgets</p>
+							<h1 style="font-family: Georgia, Palatino, serif;"><?php echo $data['title']; ?></h1>
+							<p><span id="Date"><?php echo $data['time']; ?></span> Brought to you by <?php echo $data['title']; ?></p>
 						</td>
 					</tr>
 				</table>
@@ -221,7 +221,7 @@
 							<ul>
 																<li><a href="#">Happening this month</a></li>
 								<li><a href="#">Latest Events</a></li>
-								<li><a href="#">New Web Site</a></li>
+								<li><a href="#"><?php echo $data['title']; ?></a></li>
 							</ul>
 							<h3 id="First">Also this month</h3>
 							<p>Lorem ipsum dolor sit amet, lipsum consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio.</p>
@@ -231,11 +231,11 @@
 						<td id="Primary" width="350" style="font-family: Helvetica, Arial, sans-serif;">
 							<h2 style="font-family: Georgia, Palatino, serif;">Happening this month</h2>
 <img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi.</p>
+
 <p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet.</p>
 
 <h2 style="font-family: Georgia, Palatino, serif;">Latest Events</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam tristique nibh at dolor venenatis aliquet.</p>
+<p><?php echo $data['content']; ?> </p>
 						</td>
 					</tr>
 				</table>

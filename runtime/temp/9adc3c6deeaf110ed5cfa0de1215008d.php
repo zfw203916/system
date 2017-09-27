@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\1\3.html";i:1506418893;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\Program Files\WWW\system\public/../application/index\view\h5email\email\1\3.html";i:1506494753;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -238,56 +238,20 @@
 
 <body>
 <div id="BodyImposter">
-	<table cellspacing="0" cellpadding="15" width="100%">
-		<tr>
-			<td id="Helpful">
-				<table cellspacing="0" cellpadding="0" width="550">
-					<tr>
-						<td style="font-family: Helvetica, Arial, sans-serif;">
-							<p>You are receiving this email because the email address [email] was subscribed to our email list. Having trouble reading this email? View it on our <a href="#">website</a>.</p>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<table cellspacing="0" cellpadding="15" width="100%">
-		<tr>
-			<td id="Masthead" style="color: #fff; background: #5dc7db;">
-				<table cellspacing="0" cellpadding="0" width="550">
-					<tr>
-						<td style="color: #fff; background: #5dc7db; font-family: Helvetica, Arial, sans-serif;">
-							<h1>Widget Monthly Newsletter</h1>
-							<p><span id="Date">September 27, 2007</span> Brought to you by ABC Widgets</p>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
+
 	<div id="Box">
 		<table id="Content" cellspacing="0" cellpadding="15" width="580">
 			<tr valign="top">
-				<td id="Primary" style="font-family: Helvetica, Arial, sans-serif;">
-					<h2>Happening this month</h2>
-<img src="img/blank.gif" width="159" height="100" alt="" />
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi.</p>
-<p>Integer nonummy augue in lectus. Aliquam tristique nibh at dolor venenatis aliquet.</p>
 
-<h2>Latest Events</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo. Mauris sollicitudin sapien nec quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam tristique nibh at dolor venenatis aliquet.</p>
-				</td>
 				<td id="Secondary" style="font-family: Helvetica, Arial, sans-serif;">
-					<h2>In this issue</h2>
+					<h2><?php echo $data['title']; ?></h2>
 					<ul>
-																<li><a href="#">Happening this month</a></li>
-								<li><a href="#">Latest Events</a></li>
-								<li><a href="#">New Web Site</a></li>
+						<li><a href="#"><?php echo $data['title']; ?></a></li>
 							</ul>
 					<h2>Also this issue</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio.</p>
+					<p></p>
 					<h2>Pass it on</h2>
-					<p>If you know someone who may be interested in receiving this newsletter, you can easily <forwardtoafriend>forward up to five copies</forwardtoafriend> at once.</p>
+					<p><?php echo $data['content']; ?></p>
 				</td>
 			</tr>
 		</table>
@@ -298,28 +262,14 @@
 				<table cellspacing="0" cellpadding="0" width="550">
 					<tr>
 						<td style="color: #f5bc93; background: #eb7926; font-family: Helvetica, Arial, sans-serif;">
-							<h2 style="color: #fff; background: #eb7926;">New Web Site</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin molestie est in augue. Proin accumsan eleifend odio. Integer mauris mi, sollicitudin at, laoreet vitae, lobortis id, justo.</p>
+							<h2 style="color: #fff; background: #eb7926;"><?php echo $data['title']; ?></h2>
 						</td>
 					</tr>
 				</table>
 			</td>
 		</tr>
 	</table>
-	<table cellspacing="0" cellpadding="15" width="100%">
-		<tr>
-		<tr>
-			<td id="Legal" style="color: #7d822b; background: #d3dd2e;">
-				<table cellspacing="0" cellpadding="0" width="550">
-					<tr>
-						<td style="color: #7d822b; background: #d3dd2e; font-family: Helvetica, Arial, sans-serif;">
-							<p v-html="message"></p> from this newsletter.</p>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
+
 </div>
 </body>
 </html>
