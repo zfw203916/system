@@ -214,6 +214,7 @@ class H5emailController extends MonBaseController
         }
 
         $this->assign('data', $merge);
+        //return view('h5email/cicada');
         return view('h5email/'.$template);
 
     }

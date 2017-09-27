@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\Program Files\WWW\system\public/../application/index\view\h5email\h5view.html";i:1506497310;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\Program Files\WWW\system\public/../application/index\view\h5email\h5view.html";i:1506497999;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,7 +197,7 @@
     <div class="container-fluid">
         <div class="row" id="id1">
             <div class="col-xl-2"></div>
-            <div id="id1a" class="col-xl-8" style=""><?php echo $data['title']; ?></div>
+            <div id="id1a" class="col-xl-8" style="color:#000"><?php echo $data['title']; ?></div>
             <div class="col-xl-2"></div>
         </div>
         <div class="row" id="id2" style="background-color: {背景色变量}">
