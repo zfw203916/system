@@ -13,6 +13,7 @@ class H5emailController extends MonBaseController
 {
     public function index(){
 
+
         $this->assign('data',$data = [
             'title'=>'易游邮件发送处理'
         ]);

@@ -8,10 +8,7 @@
 
 namespace app\index\controller;
 use think\Controller;
-
 class MonBaseController extends Controller
 {
-    public function test(){
-        echo "test";
-    }
+
 }

@@ -1,7 +1,5 @@
 <?php
 namespace app\index\controller;
-
-use app\index\model\Login;
 use app\index\model\User;
 use think\Db;
 
@@ -14,7 +12,7 @@ class IndexController extends MonBaseController
 {
     /**
      * @return \think\response\View
-     * @Ò×ÓÎ  ÄÚ²¿ÏµÍ³
+     * @æ˜“æ¸¸  å†…éƒ¨ç³»ç»Ÿ
      */
     public function index()
     {
@@ -24,27 +22,25 @@ class IndexController extends MonBaseController
 
     public function loin(){
         $this->assign([
-            'title'=>'ÏµÍ³¹ÜÀíÒ³'
+            'title'=>'å†…éƒ¨ç³»ç»Ÿç®¡ç†é¡µ'
         ]);
         return view();
     }
     /**
-     * ¼ì²éµÇÈë×´¿ö.
+     * æ£€æŸ¥ç™»å…¥çŠ¶å†µ.
      */
     public function login_check(){
 
-        $data = User::get([
-            'user'=>input('user'),
-            'password'=>input('password')
-        ]);
-
+        $data = User::get(function($query){
+            $query->where(['username'=>trim(input('username')), 'password'=>trim(md5(input('password'))),'status'=>1]);
+        });
 
         if($data){
-            $this->success("µÇÈë³É¹¦",'admin/index');
+            //session();
+            $this->success("ç™»å…¥æˆåŠŸ",'h5email/index');
         }else{
-            $this->error("µÇÈëÊ§°Ü");
+            $this->error("ç™»å…¥å¤±è´¥",'index');
         }
-        //echo "test";
     }
 
 
@@ -52,15 +48,8 @@ class IndexController extends MonBaseController
      * @return \think\response\View
      * @Victor need single h5
      * @This is attract person go here.
-     * so must need attach data.¿¼ÂÇ×¥È¡Êı¾İ¹¦ÄÜ,ºóÆÚ¿¼ÂÇ
+     * so must need attach data.è€ƒè™‘æŠ“å–æ•°æ®åŠŸèƒ½,åæœŸè€ƒè™‘
      */
-    /*
-    public function  attract(){
-        return view();
-    }
 
-    public function test(){
-        return view();
-    }
-    */
+
 }
