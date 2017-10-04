@@ -28,7 +28,6 @@ class DataController extends MonBaseController
         }
 
         public function data_obtain($test){
-
             echo $test;
         }
 
