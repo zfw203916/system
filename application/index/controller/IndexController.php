@@ -35,12 +35,35 @@ class IndexController extends MonBaseController
             $query->where(['username'=>trim(input('username')), 'password'=>trim(md5(input('password'))),'status'=>1]);
         });
 
-        if($data){
-            //session();
-            $this->success("登入成功",'h5email/index');
+        if($data['status'] > 0){
+            session_start();
+            $_SESSION = [
+                'username'=>$data['username'],
+                'uid'=>$data['uid'],
+                'group'=>$data['group']
+            ];
+
+            if($_SESSION['group'] == 1) {
+
+                $this->success("登入成功", 'h5email/index');
+            } else if($_SESSION['group'] == 2){
+
+                $this->success("登入成功","data/index");
+
+            }else{
+                $this->error("登入失败",'index');
+            }
+
+
+        }else if($data['status'] == '0'){
+            $this->error('当前用户已被禁用','index');
+
         }else{
-            $this->error("登入失败",'index');
+            $this->error('当前用户已被删除','index');
+
         }
+
+
     }
 
 

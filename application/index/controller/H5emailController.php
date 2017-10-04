@@ -26,7 +26,6 @@ class H5emailController extends MonBaseController
      */
     public function setValue(){
 
-        //$title = input("frontColor");
         $color = [
             '#FFB6C1'=>'LightPink',
             '#FFC0CB'=>'Pink',

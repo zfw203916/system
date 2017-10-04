@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1506491716;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1506070478;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\Program Files\WWW\system\public/../application/index\view\h5email\index.html";i:1506944862;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1507020562;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -14,6 +14,30 @@
   </head>
   <body id="app">
       <div class="container-fluid">
+        <?php echo \think\Session::get('username'); ?>
+        <div class="row">
+          <div class="col-xl-12">
+
+              <div class="pull-right"
+                   onclick="location.href='<?php echo url('admin/login_out'); ?>'"
+                   style="cursor:pointer;">
+                <button class="btn btn-block btn-danger">注销登录</button>
+              </div>
+            &nbsp;
+              <div class="pull-right"
+                   onclick="location.href='<?php echo url('admin/change_pwd'); ?>'"
+                   style="cursor:pointer;">
+                <button class="btn btn-block btn-primary">修改密码</button>
+              </div>
+            &nbsp;
+            <div class="pull-right"
+                 onclick="location.href=''"
+                 style="cursor:pointer;">
+              <button class="btn btn-block btn-warning">后退</button>
+            </div>
+          </div>
+        </div>
+
         <style>
             #row1{
                 background-color: #006666;
@@ -28,7 +52,7 @@
         <div class="row">
             <div class="col-xl-4 col-md-4"></div>
             <div class="col-xl-4 col-md-4">
-                <h2><p v-html="message"></p></h2>
+                <h2><p v-html="message"><?php echo $data['title']; ?></p></h2>
                 <p style="color:red">如果不填数值将按随机数据做处理</p>
             </div>
             <div class="col-xl-4 col-md-4"></div>
@@ -37,14 +61,9 @@
         <div class="row">
             <div class="col-xl-3 col-md-3"></div>
             <div class="col-xl-7 col-md-7">
-
-                    <!--<input id="line"  name="line" value="">横线条数-->
-                    <!--<br>-->
-                    <!--<input id="verticalLine"  name="verticalLine" value="">竖线条数-->
-                    <!--<br>-->
-                    <input id="bgColor" name="bgColor" value="">背景色（填入如：white）
+                    <input id="bgColor" name="bgColor" value="">背景色（填入如：white等）
                     <br>
-                    <input id="frontColor" name="frontColor" value="">字体颜色(填入如：green)
+                    <input id="frontColor" name="frontColor" value="">字体颜色(填入如：green等)
                     <br>
                     <input name="title" class="">邮件标题
                     <br>
@@ -78,22 +97,6 @@
 
         </div>
 </form>
-<script>
-    var exampleData = {
-        // 这是我们的Model
-        message :'<?php echo $data['title']; ?>'
-    }
-
-    /**创建一个 Vue 实例或 "ViewModel"
-     * 它连接 View 与 Model
-     * */
-    new Vue({
-        el:'#app',
-        data: exampleData
-    });
-
-</script>
-<!--<script src="__PUBLIC__/index/h5email.js"></script>-->
                         <footer style="bottom: 0;width: 100%; font-size:2.5ex;text-align: center">
                             Copyright@2017-2020 易游网络
                         </footer>

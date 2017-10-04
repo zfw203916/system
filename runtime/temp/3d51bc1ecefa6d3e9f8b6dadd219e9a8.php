@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1506509502;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1507020562;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"D:\Program Files\WWW\system\public/../application/index\view\data\index.html";i:1507018569;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1507020562;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -41,21 +41,11 @@
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4 hui-margin-top-30 hui-padding-all-20 hui-background-color-white">
-        <form role="form" action="<?php echo url('login_check'); ?>" method="post">
-            <div class="form-group">
-                <label for="zh">用户名：</label>
-                <input type="text" name="username" class="form-control" id="zh"  value="">
-            </div>
-            <div class="form-group">
-                <label for="mm">密码</label>
-                <input type="password" name="password" class="form-control" id="mm" value="" placeholder="密码">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">登录</button>
-        </form>
+        当前用户<?php echo \think\Session::get('username'); ?>有如下权限：
+        <button class='btn btn-block btn-success' onclick="javascript:window.location.href='<?php echo url('data_obtain'); ?>'"><?php echo $title; ?></button>
     </div>
     <div class="col-md-4"></div>
 </div>
-<script src="__PUBLIC_VALIDATE__/js/validate.js"></script>
                         <footer style="bottom: 0;width: 100%; font-size:2.5ex;text-align: center">
                             Copyright@2017-2020 易游网络
                         </footer>
