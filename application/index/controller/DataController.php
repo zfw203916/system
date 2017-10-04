@@ -27,10 +27,13 @@ class DataController extends MonBaseController
             return view('data/index');
         }
 
-        public function data_obtain(){
+        public function data_obtain($test){
 
-            echo "test";
+            echo $test;
         }
 
+        public function url_data(){
+            return view();
+        }
 
 }
