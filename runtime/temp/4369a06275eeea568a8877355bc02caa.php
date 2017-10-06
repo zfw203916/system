@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"D:\phpStudy\WWW\system\public/../application/index\view\index\index.html";i:1506155908;s:74:"D:\phpStudy\WWW\system\public/../application/index\view\common\header.html";i:1506155908;s:74:"D:\phpStudy\WWW\system\public/../application/index\view\common\footer.html";i:1506155908;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"D:\phpStudy\WWW\system\public/../application/index\view\index\index.html";i:1506155908;s:74:"D:\phpStudy\WWW\system\public/../application/index\view\common\header.html";i:1506265645;s:74:"D:\phpStudy\WWW\system\public/../application/index\view\common\footer.html";i:1506155908;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -12,7 +12,7 @@
     <script src="__3WBD_JS__/bootstrap.min.js"></script>
     <script src="__3WBD_VUE__/vue.min.js"></script>
   </head>
-  <body id="app">
+  <body>
       <div class="container-fluid">
 <div class="row">
     <div class="col-md-4"></div>
