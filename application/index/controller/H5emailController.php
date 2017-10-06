@@ -36,4 +36,16 @@ class H5emailController extends MonBaseController
         return view('h5email/h5view');
     }
 
+    public function vueTest(){
+        $data =[
+            'title'=>'易游游戏',
+            'line'=>input('line'),
+            'bgColor'=>input('bgColor'),
+            'other'=>input('other')
+        ];
+
+        $this->assign('data', $data);
+        return view();
+    }
+
 }
