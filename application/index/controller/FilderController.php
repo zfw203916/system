@@ -39,7 +39,7 @@ class FilderController extends MonBaseController
 			
 			$allowtype = array("gif", "png", "jpg","doc");   //设置充许上传的类型为gif, png和jpg
 			$size = 1000000;                           //设置充许大小为1M（1000000字节）以内的文件
-			$path = "./uploads";                       //设置上传后保存文件的路径
+			$path = "./uploads/images";                       //设置上传后保存文件的路径
 					
 		   //1. 判断文件是否可以成功上传到服务器，$_FILES['myfile']['error'] 为0表示上传成功
 		   if($_FILES['myfile']['error'] > 0){
@@ -80,15 +80,26 @@ class FilderController extends MonBaseController
 				 die("上传文件不是{$_FILES['myfile']['name']}一个合法文件: ");
 			 }
 
-			 //7. 如果文件上传成功则输出
-			 echo "文件".$_FILES['myfile']['name']."上传成功,保存在{$path}中，大小为{$_FILES['myfile']['size']}字节";   			
-		}catch(\Exception $e){	
-		
+			 //7.
+			echo "文件".$_FILES['myfile']['name']."上传成功,保存在{$path}中，大小为{$_FILES['myfile']['size']}字节";
+			//header("Location:",'up_list');
+			//$this->success('上传成功','up_list');
+		}catch(\Exception $e){
 			echo "错误";
-			
 		}
 		 
 	}
+
+	/**
+	 * 上传后显示列表,截取后缀名为gif,png等文件。不会。求思路。
+	 */
+	public function up_list(){
+		$allowtype = array("gif", "png", "jpg","doc");   //设置充许上传的类型为gif, png和jpg
+		$path = "./uploads";
+		$file = scandir($path);
+		return end(explode('.',$file));
+		//var_dump($type);die;
+}
 	
 	/**
 	*下载
