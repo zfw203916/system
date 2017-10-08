@@ -11,10 +11,6 @@ use think\Db;
 /*
 *原生
 */
-
-
-use My\Test;
-
 class ExcelController extends MonBaseController
 {
 
@@ -64,7 +60,14 @@ class ExcelController extends MonBaseController
 					//加载PHPExcel类
 					vendor("PHPExcel.PHPExcel");
 					//实例化PHPExcel类（注意：实例化的时候前面需要加'\'）
-					$objReader = new \PHPExcel_Reader_Excel5();
+
+					$extension = $info->getExtension();
+					if($extension == "xlsx"){
+						$objReader = new \PHPExcel_Reader_Excel2007();
+					}else{
+						$objReader = new \PHPExcel_Reader_Excel5();
+					}
+
 					$objPHPExcel = $objReader->load($path, $encode = 'utf-8');//获取excel文件
 					$sheet  = $objPHPExcel->getSheet(0);//激活当前的表
 					$highestRow = $sheet->getHighestRow();// 取得总行数

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\WWW\system\public/../application/index\view\index\excel.html";i:1507470235;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\WWW\system\public/../application/index\view\index\excel.html";i:1507479501;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +6,6 @@
     <title>导入</title>
 </head>
 <body>
-	<!--<form action="upload/upload"  method="post" enctype="multipart/form-data">-->
-
-	<!--</form>-->
 	<form action="<?php echo url('Excel/Excel_up'); ?>" enctype="multipart/form-data" method="post">
 		<div class="form-group">
 			<label for="exampleInputFile">导入Excel表格</label>
