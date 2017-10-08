@@ -11,7 +11,8 @@ return [
     'controller_suffix'      => true,
     'view_replace_str'       => [
         '__PUBLIC__'=>'static',
-        '__PUBLIC_VALIDATE__'=>'static/validate',
+        '__IMG__'  => 'static/index/setmail',
+        '__PUBLIC_VALIDATE__'=>'/static/validate',
         '__3WBD__'=>'http://apps.bdimg.com/libs/',
         '__3WBD_CSS__'=>'http://apps.bdimg.com/libs/bootstrap/3.3.4/css',
         '__3WBD_JS__'=>'http://apps.bdimg.com/libs/bootstrap/3.3.4/js',

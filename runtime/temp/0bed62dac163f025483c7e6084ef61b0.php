@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1505994448;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1505906785;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\Program Files\WWW\system\public/../application/index\view\index\index.html";i:1506509502;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\header.html";i:1507020562;s:79:"D:\Program Files\WWW\system\public/../application/index\view\common\footer.html";i:1505906782;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -12,19 +12,43 @@
     <script src="__3WBD_JS__/bootstrap.min.js"></script>
     <script src="__3WBD_VUE__/vue.min.js"></script>
   </head>
-  <body>
+  <body id="app">
       <div class="container-fluid">
+        <?php echo \think\Session::get('username'); ?>
+        <div class="row">
+          <div class="col-xl-12">
+
+              <div class="pull-right"
+                   onclick="location.href='<?php echo url('admin/login_out'); ?>'"
+                   style="cursor:pointer;">
+                <button class="btn btn-block btn-danger">注销登录</button>
+              </div>
+            &nbsp;
+              <div class="pull-right"
+                   onclick="location.href='<?php echo url('admin/change_pwd'); ?>'"
+                   style="cursor:pointer;">
+                <button class="btn btn-block btn-primary">修改密码</button>
+              </div>
+            &nbsp;
+            <div class="pull-right"
+                 onclick="location.href=''"
+                 style="cursor:pointer;">
+              <button class="btn btn-block btn-warning">后退</button>
+            </div>
+          </div>
+        </div>
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4 hui-margin-top-30 hui-padding-all-20 hui-background-color-white">
         <form role="form" action="<?php echo url('login_check'); ?>" method="post">
             <div class="form-group">
                 <label for="zh">用户名：</label>
-                <input type="text" name="user" class="form-control" id="zh" placeholder="账号">
+                <input type="text" name="username" class="form-control" id="zh"  value="">
             </div>
             <div class="form-group">
                 <label for="mm">密码</label>
-                <input type="password" name="password" class="form-control" id="mm" placeholder="密码">
+                <input type="password" name="password" class="form-control" id="mm" value="" placeholder="密码">
             </div>
             <button type="submit" class="btn btn-primary btn-block">登录</button>
         </form>
