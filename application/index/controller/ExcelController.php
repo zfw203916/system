@@ -84,7 +84,7 @@ class ExcelController extends MonBaseController
 						$res = Db::name('student')->insertAll($data);
 						if($res){
 							echo 'success';
-							$this->success('操作成功！');
+							$this->success('操作成功！');//没成功调用。可能继承出问题了。
 						}else{
 							echo 'error';
 							$this->error('操作失败！');
